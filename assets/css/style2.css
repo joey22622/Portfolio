@@ -3,13 +3,11 @@ body{
     min-height: 100vh;
     width: 100vw;
     font-family: "brother-1816", sans-serif;
-    display: flex;
 }
 
 .content-wrap{
     display: flex;
     flex-direction: column;
-    align-items: stretch;
 }
 @media screen and (min-width: 962px){
     .content-wrap{
@@ -24,6 +22,7 @@ section{
 }
 .bio-section,
 .contact-section{
+    width: 40rem;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -33,7 +32,6 @@ section{
 .portfolio-section{
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 
@@ -45,8 +43,6 @@ section{
 
     .bio-section,
     .contact-section{
-        width: 40rem;
-
 
     }
     .portfolio-section{
@@ -67,16 +63,14 @@ section{
 .logo{
     height: 100%;
     width: auto;
-    transform: scale(1.1);
-    transition: .7s;
-    filter: drop-shadow( 0 -10px 3px rgba(0,0,0,.5));
+    transform: scale(1.2);
+    transition: 1s;
+    filter: drop-shadow( 0 -10px 5px rgba(0,0,0,.4));
 }
 
 .logo path{
     transition: 1s;
-    fill: rgba(0,0,0,.7);
-    stroke: white;
-    stroke-width: 5px;
+    fill: rgba(0,0,0,.8);
 }
 
 
@@ -85,49 +79,33 @@ section{
     flex-direction: column;
     align-items: center;
     padding: 1.5rem .5rem;
-    border-top: 1px solid rgba(0,0,0,.3);
-    border-bottom: 1px solid rgba(0,0,0,.3);
+    border-top: 1px solid rgba(0,0,0,.5);
+    border-bottom: 1px solid rgba(0,0,0,.5);
     text-transform: uppercase;
-    margin-top: 1rem;
-    font-weight: 100;
-
 }
 .name{
-    font-size: 1.2rem;
-    letter-spacing: .6rem;
-    margin: 0 0 1rem 0;
-
+    font-size: .8rem;
+    letter-spacing: .5rem;
+    margin-bottom: .5rem;
 }
 .title{
-    font-size: .8rem;
+    font-size: .6rem;
     letter-spacing: .1rem;
-}
-@media screen and (min-width: 962px){
-    .name{
-        font-size: .9rem;
-        margin-bottom: .5rem;
-        margin-left: .6rem;
-    }
-    
-    .title{
-        font-size: .7rem;
-    }
-
 }
 
 .extended-info{
-    max-height: 100vh;
+    max-height: 10rem;
     margin: 1.5rem 0;
-    padding: 1.5rem;
-    font-size: 1rem;
-    line-height: 1.8rem;
-    font-weight: 100;
+    padding: 1rem;
+    font-size: .8rem;
+    line-height: 1.2rem;
     opacity: 1;
     transition: .5s ease-in-out;
     border-left: solid 1px rgba(0,0,0,.5);
     border-right: solid 1px rgba(0,0,0,.5);
     text-align: justify;
 }
+
 
 .extended-toggle{
     display: block;
@@ -141,15 +119,6 @@ section{
     cursor: pointer;
     transition: .5s;
     transform: scale(1);
-}
-
-@media screen and (min-width: 962px){
-    .extended-info{
-        font-size: .8rem;
-        line-height: 1.4rem;
-        max-height: 10rem;
-
-    }
 }
 
 .extended-toggle svg{
@@ -166,13 +135,11 @@ section{
 .extended-toggle svg circle,
 .extended-toggle svg polyline{
     transition: .5s;
-    stroke: rgba(0,0,0,.6);
 }
 
 .extended-toggle:hover svg circle, 
 .extended-toggle:hover svg polyline{
-    stroke-width: 5px;
-    stroke: rgba(0,0,0,1)
+    stroke-width: 35px;
 }
 
 
@@ -181,26 +148,19 @@ section{
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    padding: 0 1.5rem;
-    margin: 0;
 }
 
 
 .bio-hidden .logo {
     transform: scale(1);
-    filter: drop-shadow( 0 10px 3px rgba(0,0,0,.3));
+    filter: drop-shadow( 0 0 0 rgba(0,0,0,.6));
 }
 
 .bio-hidden .logo path{
-    fill: rgba(255,255,255,1);
-    /* stroke: rgba(0,0,0,1); */
-    stroke-width: 5px;
+    fill: rgba(0,0,0,.1);
+    stroke: rgba(0,0,0,1);
 }
 
-.extended-toggle path{
-    fill: none;
-    stroke: rgba(0,0,0,.1);
-}
 
 .rotated{
     transform: rotate(180deg);
@@ -212,16 +172,12 @@ section{
 .project-link,
 .thumbnail-wrap,
 .project-text-wrap{
-    transition: .6s;
+    transition: .4s;
 }
-
 .project-link{
     position: relative;
     box-shadow: 0px -5px 1rem rgba(0,0,0,.2);
     background: rgba(0,0,0,.1);
-    width: 80vw;
-    height: 80vw;
-    margin: 5vw 10vw;
 }
 
 .thumbnail-wrap,
@@ -233,8 +189,6 @@ section{
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
     background: rgba(0,0,0,.5);
     overflow: hidden;
@@ -244,6 +198,7 @@ section{
 .project-text-wrap{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     position: absolute;
     background: white;
     height: 100%;
@@ -256,21 +211,14 @@ section{
 }
 .project-title{
     text-transform: uppercase;
-    font-weight: 400;
-    font-size: 1.1rem;
+    font-weight: 100;
     padding: 1rem 0;
     border-top: 1px solid rgba(0,0,0,.2);
-    border-bottom: 1px solid rgba(0,0,0,.04);
+    border-bottom: 1px solid rgba(0,0,0,.2);
 }
 .project-blurb{
     min-height: 5rem;
-    font-weight: 100;
-    font-size: 1rem;
-    padding: 1rem;
-    text-align: center;
-    line-height: 1.4rem;
-    text-transform: uppercase;
-    flex-grow: 100;
+
 }
 
 
@@ -294,15 +242,6 @@ section{
 
     }
 
-    .project-title{
-        font-size: .9rem;
-    }
-
-    .project-blurb{
-        font-size: .75rem;
-        line-height: 1.2rem;
-    }
-
     .project-screenshot{
         height: 100%;
         object-fit: contain;
@@ -324,47 +263,5 @@ section{
 
 
 /* CONTACT SECTION */
-.contact-container{
-    display: flex;
-    justify-content: space-between;
-    align-content: space-between;
-    flex-wrap: wrap;
-    height: 16rem;
-    width: 16rem;
-    margin: 0 auto;
-    margin-bottom: 2.4rem;
-
-}
-
-.social-wrap{
-    margin: 1rem;
-    height: 4rem;
-    width: 4rem;
-    box-shadow: 0 -15px 35px rgba(0,0,0,.6);
-    transition: .8s;
-    padding: 1rem;
-    transition: .5s;
-}
 
 
-.social-wrap path{
-    fill: rgba(0,0,0,.02);
-    stroke: rgba(0,0,0,.3);
-    stroke-width: .3px;
-    transition: .5s;
-}
-
-.bio-hidden .social-wrap {
-    box-shadow: 0 15px 35px rgba(0,0,0,.6);
-}
-
-.social-wrap:hover{
-    transform: scale(1.1);
-}
-.social-wrap:hover path{
-    fill: rgba(0, 0, 0, 0.8);
-}
-
-strong{
-    font-weight: 400;
-}
