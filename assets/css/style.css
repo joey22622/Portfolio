@@ -70,6 +70,19 @@ section{
     transform: scale(1.1);
     transition: .7s;
     filter: drop-shadow( 0 -10px 3px rgba(0,0,0,.5));
+    cursor: pointer;
+}
+.logo:hover{
+    transform: scale(1);
+    filter: drop-shadow( 0 -5px 2px rgba(0,0,0,.5));
+    transition: .2s;
+}
+.bio-hidden .logo:hover{
+    transform: scale(1.1);
+    transition: .2s;
+    filter: drop-shadow( 0 10px 3px rgba(0,0,0,.3));
+
+    
 }
 
 .logo path{

@@ -14,3 +14,4 @@ function toggleBio () {
 }
 
 $(".extended-toggle").click(toggleBio);
+$(".logo").click(toggleBio); 
