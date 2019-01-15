@@ -31,21 +31,32 @@ section{
 }
 
 .portfolio-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: .1rem;
+}
+@media screen and (min-width: 736px){
+    .portfolio-section{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0;
+    }
+}
+@media screen and (min-width: 700px){
+    .portfolio-section{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 
 @media screen and (min-width: 962px){
     section{
         min-height: 100vh;
-        box-shadow: 
+
     }
 
     .bio-section,
     .contact-section{
-        width: 40rem;
+        min-width: 20rem;
 
 
     }
@@ -94,16 +105,31 @@ section{
 }
 
 
+.bio-hidden .basic-info{
+    background: white;
+    color: inherit;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    font-weight: 100;
+    border-top: 1px solid rgba(0,0,0,.3);
+    border-bottom: 1px solid rgba(0,0,0,.3);
+
+}
+
 .basic-info{
-    display : flex;
+    display: flex;    
     flex-direction: column;
     align-items: center;
     padding: 1.5rem .5rem;
-    border-top: 1px solid rgba(0,0,0,.3);
-    border-bottom: 1px solid rgba(0,0,0,.3);
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
     text-transform: uppercase;
     margin-top: 1rem;
+    transition: .5s;
+
+    background: rgba(0,0,0,.8);
+    color: white;
     font-weight: 100;
+    box-shadow: 0 -10px 20px rgba(0,0,0,.5);
 
 }
 .name{
@@ -299,7 +325,6 @@ section{
     font-weight: 400;
     font-size: 1.1rem;
     padding: 1rem 0;
-    border-top: 1px solid rgba(0,0,0,.2);
     border-bottom: 1px solid rgba(0,0,0,.04);
 }
 .project-blurb{
@@ -315,7 +340,7 @@ section{
 
 
 
-@media screen and (min-width: 962px){
+@media screen and (min-width: 700px){
     .project-link{
         margin: 1rem;
         height: 14rem;
@@ -328,7 +353,9 @@ section{
         opacity: 0;
         transform: rotate(-90deg);
     }
-
+    .project-link:hover{
+        z-index: 1;
+    }
     
     .thumbnail-wrap{
 
